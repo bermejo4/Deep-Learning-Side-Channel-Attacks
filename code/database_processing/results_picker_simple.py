@@ -171,7 +171,7 @@ def insert_into_table(database, byte, key, leakage_model, batch_size, epochs, mo
 ## IMPORTANT VARIABLES:
 # Database name
 database_name = 'database_ascad.sqlite'
-load_dotenv()
+load_dotenv('../.env')
 database_path = os.getenv("SIMPLE_DATABASE_PATH")
 database_file = database_path + '/' +database_name
 # Ids Range
@@ -220,7 +220,4 @@ for analysis_id in range(analysis_id_range[0], analysis_id_range[1]):
         analysis_id = datos['analysis_id']
         file_name = datos['filename']
         insert_into_table(database_file, byte, key, leakage_model, batch_size, epochs, model, analysis_id, file_name, ge_value, sr_value)
-
-
-
 
