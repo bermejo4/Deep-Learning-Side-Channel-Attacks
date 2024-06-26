@@ -17,8 +17,8 @@ reports_folder = os.getenv("REPORTS_FOLDER")
 
 
 #Global Varaiables
-max_num_raw_file = 512
-max_num_proc_file = 256
+max_num_raw_file = 10
+max_num_proc_file = 5
 raw_datasets_dict = {}
 proc_datasets_dict = {}
 pair_key_dict = {}
