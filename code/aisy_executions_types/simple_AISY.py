@@ -42,7 +42,7 @@ for i in range(0, max_dataset_num):
     for nn in nn_types:
         telegram_notification(f"The program is in dataset number {i} and nn: {str(nn.__name__)}")
         for batchsize in batch_sizes:
-            for bit in range(0,15):#range of bits 0-16:
+            for byte in range(0,15):#range of bits 0-16:
                 try:
                     aisy = aisy_sca.Aisy()
                     aisy.set_resources_root_folder(resources_root_folder)
@@ -50,7 +50,7 @@ for i in range(0, max_dataset_num):
                     aisy.set_datasets_root_folder(datasets_root_folder)
                     aisy.set_database_name("database_ecg_simple.sqlite")
                     aisy.set_dataset(dataset_configuration)
-                    aisy.set_aes_leakage_model(leakage_model='ID', byte=bit)
+                    aisy.set_aes_leakage_model(leakage_model='ID', byte=byte)
                     aisy.set_batch_size(batchsize)
                     aisy.set_epochs(25)
                     aisy.set_neural_network(nn)
