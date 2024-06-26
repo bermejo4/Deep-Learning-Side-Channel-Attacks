@@ -15,22 +15,25 @@
     git clone https://github.com/AISyLab/AISY_Framework.git
     ```
 
-2. Then you must enter to AISY_Framework:
-    ```
-    cd AISY_Framework
-    ```
-3. Create a Python environment using conda (The Python version is very important):
+2. Create a Python environment using conda (Python version is very important):
    ```
    conda create --name DLSCAenv python=3.8
    ```
-4. Activate de environment:
+3. Activate de environment:
     ```
-   conda sctivate DLSCAenv
+   conda activate DLSCAenv
    ``` 
-5. **Important Step** Install the requirements of this project (NOT the AISY-framework requirements) delete the AISY-framework requirements and paste this requirements.txt -> [code/requirements.txt](/code/requirements.txt)
+4. Then, enter to AISY_Framework:
+    ```
+    cd AISY_Framework
+    ```
+5. **Important Step** Install the requirements of this project (NOT the AISY-framework requirements) delete the AISY-framework requirements and paste this requirements.txt -> [code/requirements.txt](/code/requirements.txt). These are the main differences, but with the old requirements, the installation doesn't work because some libs are deprecated: ![diff requirements](/doc/images/requirements_diff.png)
 
-6. Install the requirements:
+6. Go to the same directory where is the requirements.txt file and install it with this command:
    ```
    pip install -r requirements.txt
    ```
-7. dfs
+7. To test it you can enter to AISY_Framework folder and run:
+   ```
+   flask run
+   ```
