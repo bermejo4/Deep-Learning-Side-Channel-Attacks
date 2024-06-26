@@ -180,7 +180,7 @@ def insert_into_table(database, byte, key, leakage_model, batch_size, epochs, mo
 # Database name
 database_name = 'database_ascad_simple.sqlite'
 load_dotenv('../.env')
-database_path = os.getenv("SIMPLE_DATABASE_PATH")
+database_path = os.getenv("SIMPLE_DATABASE_FOLDER_PATH")
 database_file = database_path + '/' +database_name
 # Ids Range
 # analysis_id_range = (0, 4508)
