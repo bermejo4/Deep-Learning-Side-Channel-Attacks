@@ -22,7 +22,7 @@ databases_root_folder = os.getenv("DATABASES_ROOT_FOLDER")
 
 config_file_folder = os.getenv("CONFIG_FILE_FOLDER")
 
-max_dataset_num = 6 #CHANGE IT!!!!!
+max_dataset_num = 5 #CHANGE IT!!!!!
 
 # types of neural networks
 nn_types = [mlp, cnn]
