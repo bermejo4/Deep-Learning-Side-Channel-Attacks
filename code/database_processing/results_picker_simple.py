@@ -39,6 +39,10 @@ def get_success_rate_from_id(database, id):
     
     cursor.execute(query, (id, ))
     results = cursor.fetchall()
+
+    if not results:
+        conn.close()
+        return None
     
     # Extract data from the query results
     data_sr = [row[0] for row in results]
@@ -62,6 +66,10 @@ def get_guessing_entropy_from_id(database, id):
     
     cursor.execute(query, (id, ))
     results = cursor.fetchall()
+
+    if not results:
+        conn.close()
+        return None
     
     # Extract data from the query results
     data = [row[0] for row in results]
@@ -170,13 +178,13 @@ def insert_into_table(database, byte, key, leakage_model, batch_size, epochs, mo
 
 ## IMPORTANT VARIABLES:
 # Database name
-database_name = 'database_ascad.sqlite'
+database_name = 'database_ascad_simple.sqlite'
 load_dotenv('../.env')
 database_path = os.getenv("SIMPLE_DATABASE_PATH")
 database_file = database_path + '/' +database_name
 # Ids Range
 # analysis_id_range = (0, 4508)
-analysis_id_range = (1, 45)
+analysis_id_range = (1, 4385)
 
 # Filter by Guessing Entropy or by Sucess Rate:
 # filter_by = 'success_rate'
@@ -190,6 +198,9 @@ for analysis_id in range(analysis_id_range[0], analysis_id_range[1]):
 
     ge_value = get_guessing_entropy_from_id(database_file, analysis_id)
     sr_value = get_success_rate_from_id(database_file, analysis_id)
+
+    if ge_value is None or sr_value is None:
+        continue 
 
     if float(ge_value) <= 3 and filter_by == 'guessing_entropy':
         print("GE_VALUE: "+str(ge_value))
