@@ -184,7 +184,7 @@ database_path = os.getenv("SIMPLE_DATABASE_FOLDER_PATH")
 database_file = database_path + '/' +database_name
 # Ids Range
 # analysis_id_range = (0, 4508)
-analysis_id_range = (1, 4385)
+analysis_id_range = (1, 400)
 
 # Filter by Guessing Entropy or by Sucess Rate:
 # filter_by = 'success_rate'
