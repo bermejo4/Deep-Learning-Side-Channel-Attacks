@@ -33,7 +33,13 @@
    ```
    pip install -r requirements.txt
    ```
-7. To test it you can enter to AISY_Framework folder and run:
+7. Additionally, these three lines must be added to app.py file in AISY_Framework:
+   ```
+   databases_root_folder = os.getenv("DATABASES_ROOT_FOLDER")
+   datasets_root_folder = os.getenv("DATASETS_ROOT_FOLDER")
+   resources_root_folder = os.getenv("RESOURCES_ROOT_FOLDER")
+    ```
+8. To test it you can enter to AISY_Framework folder and run:
    ```
    flask run
    ```
