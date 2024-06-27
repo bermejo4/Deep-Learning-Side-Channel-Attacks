@@ -1,56 +1,56 @@
 DATASET PREPROCESSING REPORT:
 ----------------------------
 Dataset Number: 0
-Combined Traces path: ../../data/datasets_ready/0_traces.npy and dimensions: rows = 20000 and cols = 129
-Combined Textin path: ../../data/datasets_ready/0_textin.npy and dimensions: rows = 20000 and cols = 16
-Combined Textout path: ../../data/datasets_ready/0_textout.npy and dimensions: rows = 20000 and cols = 16
-Combined Keys path: ../../data/datasets_ready/0_keys.npy and dimensions: rows = 20000 and cols = 16
+Combined Traces path: ../../data/regular_ecg/datasets_ready/0_traces.npy and dimensions: rows = 20000 and cols = 129
+Combined Textin path: ../../data/regular_ecg/datasets_ready/0_textin.npy and dimensions: rows = 20000 and cols = 16
+Combined Textout path: ../../data/regular_ecg/datasets_ready/0_textout.npy and dimensions: rows = 20000 and cols = 16
+Combined Keys path: ../../data/regular_ecg/datasets_ready/0_keys.npy and dimensions: rows = 20000 and cols = 16
 Combined Key Array: [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]
 Combined Key String: 00000000000000000000000000000000
-Combined Key path: ../../data/datasets_ready/0_keys.npy
+Combined Key path: ../../data/regular_ecg/datasets_ready/0_keys.npy
 ----------------------------
 ----------------------------
 ----------------------------
 Dataset Number: 1
-Combined Traces path: ../../data/datasets_ready/1_traces.npy and dimensions: rows = 20000 and cols = 129
-Combined Textin path: ../../data/datasets_ready/1_textin.npy and dimensions: rows = 20000 and cols = 16
-Combined Textout path: ../../data/datasets_ready/1_textout.npy and dimensions: rows = 20000 and cols = 16
-Combined Keys path: ../../data/datasets_ready/1_keys.npy and dimensions: rows = 20000 and cols = 16
+Combined Traces path: ../../data/regular_ecg/datasets_ready/1_traces.npy and dimensions: rows = 20000 and cols = 129
+Combined Textin path: ../../data/regular_ecg/datasets_ready/1_textin.npy and dimensions: rows = 20000 and cols = 16
+Combined Textout path: ../../data/regular_ecg/datasets_ready/1_textout.npy and dimensions: rows = 20000 and cols = 16
+Combined Keys path: ../../data/regular_ecg/datasets_ready/1_keys.npy and dimensions: rows = 20000 and cols = 16
 Combined Key Array: [1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]
 Combined Key String: 01010101010101010101010101010101
-Combined Key path: ../../data/datasets_ready/1_keys.npy
+Combined Key path: ../../data/regular_ecg/datasets_ready/1_keys.npy
 ----------------------------
 ----------------------------
 ----------------------------
 Dataset Number: 2
-Combined Traces path: ../../data/datasets_ready/2_traces.npy and dimensions: rows = 20000 and cols = 129
-Combined Textin path: ../../data/datasets_ready/2_textin.npy and dimensions: rows = 20000 and cols = 16
-Combined Textout path: ../../data/datasets_ready/2_textout.npy and dimensions: rows = 20000 and cols = 16
-Combined Keys path: ../../data/datasets_ready/2_keys.npy and dimensions: rows = 20000 and cols = 16
+Combined Traces path: ../../data/regular_ecg/datasets_ready/2_traces.npy and dimensions: rows = 20000 and cols = 129
+Combined Textin path: ../../data/regular_ecg/datasets_ready/2_textin.npy and dimensions: rows = 20000 and cols = 16
+Combined Textout path: ../../data/regular_ecg/datasets_ready/2_textout.npy and dimensions: rows = 20000 and cols = 16
+Combined Keys path: ../../data/regular_ecg/datasets_ready/2_keys.npy and dimensions: rows = 20000 and cols = 16
 Combined Key Array: [2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2]
 Combined Key String: 02020202020202020202020202020202
-Combined Key path: ../../data/datasets_ready/2_keys.npy
+Combined Key path: ../../data/regular_ecg/datasets_ready/2_keys.npy
 ----------------------------
 ----------------------------
 ----------------------------
 Dataset Number: 3
-Combined Traces path: ../../data/datasets_ready/3_traces.npy and dimensions: rows = 20000 and cols = 129
-Combined Textin path: ../../data/datasets_ready/3_textin.npy and dimensions: rows = 20000 and cols = 16
-Combined Textout path: ../../data/datasets_ready/3_textout.npy and dimensions: rows = 20000 and cols = 16
-Combined Keys path: ../../data/datasets_ready/3_keys.npy and dimensions: rows = 20000 and cols = 16
+Combined Traces path: ../../data/regular_ecg/datasets_ready/3_traces.npy and dimensions: rows = 20000 and cols = 129
+Combined Textin path: ../../data/regular_ecg/datasets_ready/3_textin.npy and dimensions: rows = 20000 and cols = 16
+Combined Textout path: ../../data/regular_ecg/datasets_ready/3_textout.npy and dimensions: rows = 20000 and cols = 16
+Combined Keys path: ../../data/regular_ecg/datasets_ready/3_keys.npy and dimensions: rows = 20000 and cols = 16
 Combined Key Array: [3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3]
 Combined Key String: 03030303030303030303030303030303
-Combined Key path: ../../data/datasets_ready/3_keys.npy
+Combined Key path: ../../data/regular_ecg/datasets_ready/3_keys.npy
 ----------------------------
 ----------------------------
 ----------------------------
 Dataset Number: 4
-Combined Traces path: ../../data/datasets_ready/4_traces.npy and dimensions: rows = 20000 and cols = 129
-Combined Textin path: ../../data/datasets_ready/4_textin.npy and dimensions: rows = 20000 and cols = 16
-Combined Textout path: ../../data/datasets_ready/4_textout.npy and dimensions: rows = 20000 and cols = 16
-Combined Keys path: ../../data/datasets_ready/4_keys.npy and dimensions: rows = 20000 and cols = 16
+Combined Traces path: ../../data/regular_ecg/datasets_ready/4_traces.npy and dimensions: rows = 20000 and cols = 129
+Combined Textin path: ../../data/regular_ecg/datasets_ready/4_textin.npy and dimensions: rows = 20000 and cols = 16
+Combined Textout path: ../../data/regular_ecg/datasets_ready/4_textout.npy and dimensions: rows = 20000 and cols = 16
+Combined Keys path: ../../data/regular_ecg/datasets_ready/4_keys.npy and dimensions: rows = 20000 and cols = 16
 Combined Key Array: [4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4]
 Combined Key String: 04040404040404040404040404040404
-Combined Key path: ../../data/datasets_ready/4_keys.npy
+Combined Key path: ../../data/regular_ecg/datasets_ready/4_keys.npy
 ----------------------------
 ----------------------------
