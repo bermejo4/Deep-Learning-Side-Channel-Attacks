@@ -1,0 +1,9 @@
+{
+    "traces_file" : "../../data/random_data_not_ecg/datasets_pre_generate/3_FPGA_dataset_pre.h5",
+    "labeled_traces_file" : "../../data/random_data_not_ecg/datasets_post_generate/3_FPGA_dataset_post.h5",
+    "profiling_index" : [n for n in range(0,18000)],
+    "attack_index" : [n for n in range(18000,20000)],
+    "target_points" : [n for n in range(0,129)],
+    "profiling_desync" : 0,
+    "attack_desync" : 0
+    }
