@@ -40,12 +40,13 @@ for i in range(0, max_dataset_num):
     telegram_notification(f"The program is in dataset number {i}")
     for batchsize in batch_sizes:
         for byte in range(0,15):#range of bits 0-16:
+            telegram_notification(f"The program is in byte {byte}")
             try:
                 aisy = aisy_sca.Aisy()
                 aisy.set_resources_root_folder(resources_root_folder)
                 aisy.set_database_root_folder(databases_root_folder)
                 aisy.set_datasets_root_folder(datasets_root_folder)
-                aisy.set_database_name("database_ascad_hyper_selec_grid_search_mlp.sqlite")
+                aisy.set_database_name("database_ecg_hyper_selec_grid_search_mlp.sqlite")
                 aisy.set_dataset(dataset_configuration)
                 aisy.set_aes_leakage_model(leakage_model='ID', byte=byte)
                 aisy.set_batch_size(batchsize)

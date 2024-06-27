@@ -47,7 +47,7 @@ for i in range(0, max_dataset_num):
                 aisy.set_resources_root_folder(resources_root_folder)
                 aisy.set_database_root_folder(databases_root_folder)
                 aisy.set_datasets_root_folder(datasets_root_folder)
-                aisy.set_database_name("database_ascad_hyper_selec_rand_search_cnn.sqlite")
+                aisy.set_database_name("database_ecg_hyper_selec_rand_search_cnn.sqlite")
                 aisy.set_dataset(dataset_configuration)
                 aisy.set_aes_leakage_model(leakage_model='ID', byte=byte)
                 
@@ -94,7 +94,7 @@ for i in range(0, max_dataset_num):
                     "metric": "guessing_entropy",
                     "stop_condition": False,
                     "stop_value": 1.0,
-                    "max_trials": 50,
+                    "max_trials": 10,
                     "train_after_search": True
                 }
 
