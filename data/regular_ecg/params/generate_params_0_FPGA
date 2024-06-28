@@ -1,6 +1,6 @@
 {
-    "traces_file" : "../../data/datasets_pre_generate/0_FPGA_dataset_pre.h5",
-    "labeled_traces_file" : "../../data/datasets_post_generate/0_FPGA_dataset_post.h5",
+    "traces_file" : "../../data/regular_ecg/datasets_pre_generate/0_FPGA_dataset_pre.h5",
+    "labeled_traces_file" : "../../data/regular_ecg/datasets_post_generate/0_FPGA_dataset_post.h5",
     "profiling_index" : [n for n in range(0,18000)],
     "attack_index" : [n for n in range(18000,20000)],
     "target_points" : [n for n in range(0,129)],

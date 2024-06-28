@@ -1,5 +1,5 @@
 {
-        "filename": "../../data/datasets_post_generate/0_FPGA_dataset_post.h5",
+        "filename": "../../data/regular_ecg/datasets_post_generate/0_FPGA_dataset_post.h5",
         "key": "00000000000000000000000000000000",
         "first_sample": 0,
         "number_of_samples": 129,
