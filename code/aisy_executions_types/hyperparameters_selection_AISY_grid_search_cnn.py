@@ -39,7 +39,7 @@ for i in range(0, max_dataset_num):
     # AISY SCA configuration
     telegram_notification(f"The program is in dataset number {i}")
     for batchsize in batch_sizes:
-        for byte in range(0,15):#range of bits 0-16:
+        for byte in range(0,16):#range of bits 0-16:
             try:
                 aisy = aisy_sca.Aisy()
                 aisy.set_resources_root_folder(resources_root_folder)
