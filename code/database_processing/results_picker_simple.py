@@ -178,13 +178,15 @@ def insert_into_table(database, byte, key, leakage_model, batch_size, epochs, mo
 
 ## IMPORTANT VARIABLES:
 # Database name
-database_name = 'database_ecg_simple.sqlite'
 load_dotenv('../.env')
 database_path = os.getenv("SIMPLE_DATABASE_FOLDER_PATH")
+data_type = os.getenv("data_type")
+database_name = f"database_{data_type}_simple.sqlite" # BE CAREFUL!!!! CHANGE THE NAME IF YOU NEED IT.
 database_file = database_path + '/' +database_name
+data_type = os.getenv("data_type")
 # Ids Range
 # analysis_id_range = (0, 4508)
-analysis_id_range = (1, 400)
+analysis_id_range = (1, 800)
 
 # Filter by Guessing Entropy or by Sucess Rate:
 # filter_by = 'success_rate'
@@ -202,7 +204,7 @@ for analysis_id in range(analysis_id_range[0], analysis_id_range[1]):
     if ge_value is None or sr_value is None:
         continue 
 
-    if float(ge_value) <= 3 and filter_by == 'guessing_entropy':
+    if float(ge_value) <= 10 and filter_by == 'guessing_entropy':
         print("GE_VALUE: "+str(ge_value))
         print("SR_VALUE: "+str(sr_value))
         settings = str(get_data_from_analysis(database_file, int(analysis_id))[0])
