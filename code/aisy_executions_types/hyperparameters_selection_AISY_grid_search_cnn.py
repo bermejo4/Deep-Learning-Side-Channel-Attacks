@@ -69,16 +69,16 @@ for i in range(0, max_dataset_num):
                         'pooling_type_1': ["Average"],
                         'pooling_type_2': ["Average"],
                         'pooling_type_3': ["Average"],
-                        'pooling_size_1': [2],
-                        'pooling_size_2': [2],
-                        'pooling_size_3': [2],
-                        'pooling_stride_1': [2],
-                        'pooling_stride_2': [2],
-                        'pooling_stride_3': [2],
-                        'neurons': [100, 200, 300],
+                        'pooling_size_1': [1],
+                        'pooling_size_2': [1],
+                        'pooling_size_3': [1],
+                        'pooling_stride_1': [1],
+                        'pooling_stride_2': [1],
+                        'pooling_stride_3': [1],
+                        'neurons': [100, 200],
                         'layers': [1, 2],
                         'dropout_rate': [0.50],
-                        'learning_rate': [0.001, 0.0001],
+                        'learning_rate': [0.001],
                         'activation': ["selu"],
                         'optimizer': ["Adam"]
                     },
@@ -102,6 +102,7 @@ for i in range(0, max_dataset_num):
 
             except Exception as e:
                 telegram_notification(f"Error in batch: {batchsize} and bit: {byte}")
+                print("------> ERROR: ", str(e))
 
 telegram_notification(f"The program has finished")
 
