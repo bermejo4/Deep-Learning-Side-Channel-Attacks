@@ -75,10 +75,10 @@ for i in range(0, max_dataset_num):
                         'pooling_stride_1': [2],
                         'pooling_stride_2': [2],
                         'pooling_stride_3': [2],
-                        'neurons': [100],
+                        'neurons': [100, 200, 300],
                         'layers': [1, 2],
                         'dropout_rate': [0.50],
-                        'learning_rate': [0.001],
+                        'learning_rate': [0.001, 0.0001],
                         'activation': ["selu"],
                         'optimizer': ["Adam"]
                     },
