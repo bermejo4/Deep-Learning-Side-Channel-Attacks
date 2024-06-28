@@ -79,7 +79,7 @@ for i in range(0, max_dataset_num):
                 aisy.run(grid_search=grid_search)
 
             except Exception as e:
-                telegram_notification(f"Error in batch: {batchsize} and bit: {byte}")
+                telegram_notification(f"Error in batch: {batchsize} and byte: {byte}")
 
 telegram_notification(f"The program has finished")
 
