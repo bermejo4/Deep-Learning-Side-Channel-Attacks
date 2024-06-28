@@ -2,3 +2,4 @@
 code/.env
 /code/processing_data_code/__pycache__
 /code/aisy_executions_types/utils/__pycache__
+/databases/._*
