@@ -181,8 +181,8 @@ def insert_into_table(database, json_data):
 # Use example:
 
 #Type of search: 
-search = 'random_search'
-# search = 'grid_search'
+# search = 'random_search'
+search = 'grid_search'
 
 load_dotenv('../.env')
 data_type = os.getenv("data_type")
@@ -191,13 +191,13 @@ database_path = os.getenv("HYPERPARAMETERS_SELECTION_DATABASE_FOLDER_PATH")
 database_file = database_path + '/' +database_name
 
 analysis_id_range = (0, 16)  # ANALYSIS IDS RANGE
-# filter_by = 'guessing_entropy'
-filter_by = 'success_rate'
+filter_by = 'guessing_entropy'
+# filter_by = 'success_rate'
 
 
 create_table(database_file)
 
-print("WORKING WITH: "+ str(filter_by))
+print("WORKING WITH: "+ str(database_name)+ ", Filtered by: " + str(filter_by))
 ids = get_ids_best_models(database_file, analysis_id_range, filter_by)
 print("IDs encontrados:", ids)
 
@@ -235,7 +235,7 @@ for id in ids:
     "key":data['key'],
     "batch_size": data['batch_size'],
     "epochs": data['epochs'],
-    "model": data['random_search']['neural_network'],
+    "model": data[search]['neural_network'],
     "analysis_id": data['analysis_id'],
     "file_name": data['filename'],
     "more_info": str(data_settings),
