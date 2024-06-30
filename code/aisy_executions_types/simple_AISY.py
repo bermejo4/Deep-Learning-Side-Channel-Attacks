@@ -59,6 +59,8 @@ for i in range(0, max_dataset_num):
                     aisy.run()
                 except Exception as e:
                     telegram_notification(f"Error in nn: {str(nn.__name__)} batch: {batchsize} and byte: {byte}")
+                    print("------> ERROR: ", str(e))
+
 
 telegram_notification("The program has finished")
 
