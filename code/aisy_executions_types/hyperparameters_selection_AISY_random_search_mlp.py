@@ -26,8 +26,6 @@ data_type = os.getenv("data_type")
 
 max_dataset_num = 5
 
-batch_sizes = [400, 200]
-
 telegram_notification(f"The program has started")
 for i in range(0, max_dataset_num):
     # Leer el contenido del archivo txt
@@ -42,50 +40,50 @@ for i in range(0, max_dataset_num):
 
     # AISY SCA configuration
     telegram_notification(f"The program is in dataset number {i}")
-    for batchsize in batch_sizes:
-        for byte in range(0,16):#range of bits 0-16:
-            try:
-                aisy = aisy_sca.Aisy()
-                aisy.set_resources_root_folder(resources_root_folder)
-                aisy.set_database_root_folder(databases_root_folder)
-                aisy.set_datasets_root_folder(datasets_root_folder)
-                aisy.set_database_name(f"database_{data_type}_hyper_selec_rand_search_mlp.sqlite")
-                aisy.set_dataset(dataset_configuration)
-                aisy.set_aes_leakage_model(leakage_model='ID', byte=byte)
-                
-                random_search = {
-                    "neural_network": "mlp",
-                    "hyper_parameters_search": {
-                        'layers': {"min": 2, "max": 5, "step": 1},
-                        'neurons_per_layer': {"min": 64, "max": 256, "step": 64},
-                        'learning_rate': [0.005, 0.001, 0.0005, 0.0001],
-                        'activation': ["relu", "tanh", "sigmoid"],
-                        'epochs': {"min": 10, "max": 50, "step": 10},
-                        'batch_size': {"min": 50, "max": 300, "step": 50},
-                        'optimizer': ["Adam", "RMSprop", "SGD"]
-                    },
-                    "structure": {
-                        "use_pooling_after_convolution": False,  # only for CNNs
-                        "use_pooling_before_first_convolution": False,
-                        "use_pooling_before_first_dense": False,  # only for MLPs
-                        "use_batch_norm_after_pooling": False,
-                        "use_batch_norm_before_pooling": False,
-                        "use_batch_norm_after_convolution": False,
-                        "use_dropout_after_dense_layer": False,
-                        "use_dropout_before_dense_layer": False,
-                    },
-                    "metric": "accuracy",
-                    "stop_condition": False,
-                    "stop_value": 1.0,
-                    "max_trials": 10,
-                    "train_after_search": True
-                }
+    for byte in range(0,16):#range of bits 0-16:
+        telegram_notification(f"The program is in byte number {byte}")
+        try:
+            aisy = aisy_sca.Aisy()
+            aisy.set_resources_root_folder(resources_root_folder)
+            aisy.set_database_root_folder(databases_root_folder)
+            aisy.set_datasets_root_folder(datasets_root_folder)
+            aisy.set_database_name(f"database_{data_type}_hyper_selec_random_search_mlp.sqlite")
+            aisy.set_dataset(dataset_configuration)
+            aisy.set_aes_leakage_model(leakage_model='ID', byte=byte)
+            
+            random_search = {
+                "neural_network": "mlp",
+                "hyper_parameters_search": {
+                    'layers': {"min": 2, "max": 5, "step": 1},
+                    'neurons_per_layer': {"min": 64, "max": 256, "step": 64},
+                    'learning_rate': [0.005, 0.001, 0.0005, 0.0001],
+                    'activation': ["relu", "tanh", "sigmoid"],
+                    'epochs': {"min": 10, "max": 50, "step": 10},
+                    'batch_size': {"min": 100, "max": 300, "step": 50},
+                    'optimizer': ["Adam", "RMSprop", "SGD"]
+                },
+                "structure": {
+                    "use_pooling_after_convolution": False,  # only for CNNs
+                    "use_pooling_before_first_convolution": False, # only for CNNs
+                    "use_pooling_before_first_dense": False, 
+                    "use_batch_norm_after_pooling": False,
+                    "use_batch_norm_before_pooling": False,
+                    "use_batch_norm_after_convolution": False, # only for CNNs
+                    "use_dropout_after_dense_layer": False,
+                    "use_dropout_before_dense_layer": False,
+                },
+                "metric": "accuracy",
+                "stop_condition": False,
+                "stop_value": 1.0,
+                "max_trials": 10,
+                "train_after_search": True
+            }
 
-                aisy.run(random_search=random_search)
+            aisy.run(random_search=random_search)
 
-            except Exception as e:
-                telegram_notification(f"Error in byte: {byte}")
-                print("------> ERROR: ", str(e))
+        except Exception as e:
+            telegram_notification(f"Error in byte: {byte}")
+            print("------> ERROR: ", str(e))
 
 
 telegram_notification(f"The program has finished")
