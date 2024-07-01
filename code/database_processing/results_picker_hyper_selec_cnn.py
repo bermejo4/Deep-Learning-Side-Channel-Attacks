@@ -181,8 +181,8 @@ def insert_into_table(database, json_data):
 # Use example:
 
 #Type of search: 
-# search = 'random_search'
-search = 'grid_search'
+search = 'random_search'
+# search = 'grid_search'
 
 load_dotenv('../.env')
 data_type = os.getenv("data_type")
