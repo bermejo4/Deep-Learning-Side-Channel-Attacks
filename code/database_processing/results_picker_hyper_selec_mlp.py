@@ -173,12 +173,12 @@ def insert_into_table(database, json_data):
 # Use example:
 
 #Type of search: 
-# search = 'random_search'
-search = 'grid_search'
+search = 'random_search'
+# search = 'grid_search'
 
 load_dotenv('../.env')
 data_type = os.getenv("data_type")
-database_name = f"database_{data_type}_hyper_selec_{search}_cnn.sqlite"
+database_name = f"database_{data_type}_hyper_selec_{search}_mlp.sqlite"
 database_path = os.getenv("HYPERPARAMETERS_SELECTION_DATABASE_FOLDER_PATH")
 database_file = database_path + '/' +database_name
 
@@ -220,7 +220,7 @@ for id in ids:
     "key":data['key'],
     "batch_size": data['batch_size'],
     "epochs": data['epochs'],
-    "model": data['grid_search']['neural_network'],
+    "model": data[search]['neural_network'],
     "analysis_id": data['analysis_id'],
     "file_name": data['filename'], 
     "more_info": str(data_settings),
