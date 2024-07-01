@@ -181,9 +181,9 @@ def insert_into_table(database, byte, key, leakage_model, batch_size, epochs, mo
 load_dotenv('../.env')
 database_path = os.getenv("SIMPLE_DATABASE_FOLDER_PATH")
 data_type = os.getenv("data_type")
-database_name = f"database_{data_type}_simple.sqlite" # BE CAREFUL!!!! CHANGE THE NAME IF YOU NEED IT.
+database_name = f"HW_database_{data_type}_simple.sqlite" # BE CAREFUL!!!! CHANGE THE NAME IF YOU NEED IT.
 database_file = database_path + '/' +database_name
-data_type = os.getenv("data_type")
+
 # Ids Range
 # analysis_id_range = (0, 4508)
 analysis_id_range = (1, 800)
